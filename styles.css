@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    font-family: 'Lobster', cursive;
+    color: whitesmoke;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(140deg, #0d7872, #0d7872);
+    background-size: 400% 400%;
+    animation: gradientAnimation 1.5s ease infinite, backgroundAnimation 3s ease infinite;
+    flex-direction: column;
+}
+
+/*@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}*/
+
+.texture-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('./pic2.png');
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+#container {
+    position: absolute;
+    margin: auto;
+    height: 9vh;
+    top: 15vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    filter: url(#threshold) blur(0.1px);
+}
+
+.text {
+    z-index: 1001 !important;
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    font-size: 10vh;
+    text-align: center;
+    user-select: none;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#confetti {
+
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+    /* Adjust the z-index as needed */
+}
+
+.content {
+    text-align: center;
+
+}
+
+/* ... Existing styles ... */
+
+/* ... Existing styles ... */
+
+.icing {
+    position: absolute;
+    top: 170px; /* Adjust the positioning to overlap the sponge */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 60px;
+    background-color: #f2bbc5;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0px 10px 10px rgba(255, 255, 255, 0.8); /* Adding a shadow for depth */
+}
+
+/* ... Rest of your styles ... */
+
+
+/* ... Rest of your styles ... */
+
+.cake {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    z-index: 0;
+    /* Adjust the height as needed */
+}
+
+.sponge {
+    position: relative;
+    top: 125px;
+    margin: auto;
+    width: 200px;
+    height: 60px;
+    background: #f2bbc5;
+    border-radius: 100%;
+
+
+    box-shadow:
+        0px 4px 0px #f2bbc5,
+        0px 8px 0px #f2bbc5,
+
+        0px 12px 0px #7b5d4b,
+        0px 16px 0px #7b5d4b,
+        0px 20px 0px #7b5d4b,
+        0px 24px 0px #7b5d4b,
+        0px 28px 0px #7b5d4b,
+        0px 32px 0px #7b5d4b,
+        0px 36px 0px #7b5d4b,
+        
+        0px 40px 0px #fff1c7,
+        0px 44px 0px #fff1c7,
+        0px 48px 0px #fff1c7,
+        0px 52px 0px #fff1c7,
+        0px 56px 0px #fff1c7,
+        0px 60px 0px #fff1c7,
+
+        0px 64px 0px #7b5d4b,
+        0px 68px 0px #7b5d4b,
+        0px 72px 0px #7b5d4b,
+        0px 76px 0px #7b5d4b,
+        0px 80px 0px #7b5d4b,
+        0px 84px 0px #7b5d4b,
+        0px 88px 0px #7b5d4b;
+}
+
+.plate {
+    position: absolute;
+    height: 90px;
+    width: 300px;
+    bottom: -95px;
+    left: 50%;
+    margin-left: -150px;
+    border-radius: 100%;
+    background: #fff;
+    box-shadow: 0px 6px 0px #898989;
+    z-index: -1;
+}
+
+
+.candle {
+    position: relative;
+    height: 50px;
+    width: 12px;
+    top: 130px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+#flame {
+    position: absolute;
+    z-index: 10;
+}
+
+
+.out {
+    background-color: #795548;
+    width: 2px;
+    height: 10px;
+    top: -8px;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.lit {
+    background-color: #ffc950;
+    width: 15px;
+    height: 35px;
+    filter: blur(1px);
+    border-top-left-radius: 10px 35px;
+    border-top-right-radius: 10px 35px;
+    border-bottom-right-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    top: -35px;
+    margin: auto;
+    box-shadow:
+        0 0 17px 7px rgba(244, 231, 112, 0.71);
+    transform-origin: bottom;
+    animation: flicker 1s ease-in-out alternate infinite;
+}
+
+
+
+@keyframes flicker {
+    0% {
+        transform: skewX(5deg);
+        box-shadow:
+            0 0 17px 10px rgba(244, 231, 112, 0.71);
+    }
+
+    25% {
+        transform: skewX(-5deg);
+        box-shadow:
+            0 0 17px 5px rgba(244, 231, 112, 0.71);
+    }
+
+    50% {
+        transform: skewX(10deg);
+        box-shadow:
+            0 0 17px 7px rgba(244, 231, 112, 0.71);
+    }
+
+    75% {
+        transform: skewX(-10deg);
+        box-shadow:
+            0 0 17px 5px rgba(244, 231, 112, 0.71);
+    }
+
+    100% {
+        transform: skewX(5deg);
+        box-shadow:
+            0 0 17px 10px rgba(244, 231, 112, 0.71);
+    }
+}
+
+/* Add this CSS to your styles.css or in a <style> tag in the <head> section */
+.button-container {
+    position: absolute;
+    bottom: 30px;
+    left: 10%;
+    right: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.overlay-button {
+    display: block;
+    background-color: rgba(247, 247, 247, 0.5); /* Use an rgba color with reduced opacity for the frosting effect */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 3vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 90%;
+    line-height: 1;
+    padding: 10px 0;
+    opacity: 1; /* Change opacity to 1 for the non-hover state */
+    backdrop-filter: blur(10px); /* Apply the blur effect to the background */
+    opacity: 0.7;
+}
+
+.overlay-button:hover {
+    background-color: rgba(41, 128, 185, 0.7); /* Adjust the color for hover state */
+    backdrop-filter: blur(15px); /* Apply stronger blur on hover */
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8); /* Add a text shadow for sharpness */
+}
+
