@@ -61,7 +61,7 @@ function animate() {
 
     let newTime = new Date();
     let shouldIncrementIndex = cooldown > 0;
-    let dt = (newTime - time) / 2000;
+    let dt = (newTime - time) / 3000;
     time = newTime;
 
     cooldown -= dt;
