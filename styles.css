@@ -3,7 +3,6 @@
 
 body {
     font-family: 'Lobster', cursive;
-    color: whitesmoke;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -82,6 +81,7 @@ body {
 .text {
     z-index: 1001 !important;
     position: relative;
+    filter: blur(0.15px) !important;
 }
 
 #text1,
@@ -94,15 +94,8 @@ body {
     user-select: none;
     left: 50%;
     transform: translateX(-50%);
-    background-image: linear-gradient(90deg, #1b3358, #1b3358,#1b3358,#1b3358,#1b3358);
-    -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
-    text-shadow: 0 1px 1px #1b3358d1;
-
-    /* Add a transparent border to soften the edges */
-    border: 20px solid transparent;
-    padding: 10px; /* Adjust padding as needed */
+    text-shadow: 0 0 2px rgba(53, 37, 106, 1);
 }
 
 
@@ -288,7 +281,7 @@ body {
 /* Add this CSS to your styles.css or in a <style> tag in the <head> section */
 .button-container {
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
     left: 10%;
     right: 0;
     text-align: center;
