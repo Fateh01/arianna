@@ -101,6 +101,7 @@ body::before {
     width: 220px;
     height: 400px;
     z-index: 0;
+    filter: blur(0.35px);
 }
 
 .sponge {
@@ -242,6 +243,8 @@ body::before {
     right: 0;
     text-align: center;
     z-index: 1000;
+    color: #3498db;
+    color: #2980b9;
 }
 
 .overlay-button {
