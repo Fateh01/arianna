@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-
 body {
     font-family: 'Lobster', cursive;
     margin: 0;
@@ -9,7 +8,7 @@ body {
     align-items: center;
     min-height: 100vh;
     position: relative;
-    overflow: hidden; /* Prevent content from overflowing the blurred background */
+    overflow: hidden;
 }
 
 body::before {
@@ -18,7 +17,7 @@ body::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(20px); /* Adjust the blur intensity */
+    filter: blur(20px);
     position: absolute;
     top: 0;
     left: 0;
@@ -26,33 +25,6 @@ body::before {
     bottom: 0;
     z-index: -1;
 }
-/*
-body {
-    font-family: 'Lobster', cursive;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(140deg, #0d7872, #0d7872);
-    background-size: 400% 400%;
-    animation: gradientAnimation 1.5s ease infinite, backgroundAnimation 3s ease infinite;
-    flex-direction: column;
-}
-
-/*@keyframes backgroundAnimation {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    50% {
-        background-position: 100% 0%;
-    }
-
-    100% {
-        background-position: 0% 0%;
-    }
-}*/
 
 .texture-overlay {
     position: fixed;
@@ -66,7 +38,6 @@ body {
     pointer-events: none;
 }
 
-
 #container {
     position: absolute;
     margin: auto;
@@ -77,6 +48,7 @@ body {
     text-align: center;
     filter: url(#threshold) blur(0.1px);
 }
+
 
 .text {
     z-index: 1001 !important;
@@ -95,34 +67,25 @@ body {
     left: 50%;
     transform: translateX(-50%);
     color: transparent;
-    text-shadow: 0 0 2px rgba(53, 37, 106, 1);
+    text-shadow: 0 0 2px #326ab4;
 }
 
-
-
 #confetti {
-
     height: 100%;
     left: 0px;
     position: fixed;
     top: 0px;
     width: 100%;
     z-index: 100;
-    /* Adjust the z-index as needed */
 }
 
 .content {
     text-align: center;
-
 }
-
-/* ... Existing styles ... */
-
-/* ... Existing styles ... */
 
 .icing {
     position: absolute;
-    top: 170px; /* Adjust the positioning to overlap the sponge */
+    top: 170px;
     left: 50%;
     transform: translateX(-50%);
     width: 200px;
@@ -133,17 +96,11 @@ body {
     
 }
 
-/* ... Rest of your styles ... */
-
-
-/* ... Rest of your styles ... */
-
 .cake {
     position: relative;
     width: 220px;
-    height: 300px;
+    height: 400px;
     z-index: 0;
-    /* Adjust the height as needed */
 }
 
 .sponge {
@@ -278,11 +235,10 @@ body {
     }
 }
 
-/* Add this CSS to your styles.css or in a <style> tag in the <head> section */
 .button-container {
     position: absolute;
-    bottom: 50px;
-    left: 10%;
+    bottom: 110px;
+    left: 20%;
     right: 0;
     text-align: center;
     z-index: 1000;
@@ -290,24 +246,24 @@ body {
 
 .overlay-button {
     display: block;
-    background-color: rgba(247, 247, 247, 0.5); /* Use an rgba color with reduced opacity for the frosting effect */
+    background-color: rgba(247, 247, 247, 0.5);
     color: #fff;
     text-decoration: none;
     border-radius: 25px;
     font-size: 3vh;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 90%;
+    width: 75%;
     line-height: 1;
     padding: 10px 0;
-    opacity: 1; /* Change opacity to 1 for the non-hover state */
-    backdrop-filter: blur(10px); /* Apply the blur effect to the background */
+    opacity: 1;
+    backdrop-filter: blur(10px);
     opacity: 0.7;
 }
 
 .overlay-button:hover {
-    background-color: rgba(41, 128, 185, 0.7); /* Adjust the color for hover state */
-    backdrop-filter: blur(15px); /* Apply stronger blur on hover */
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8); /* Add a text shadow for sharpness */
+    background-color: rgba(41, 128, 185, 0.7);
+    backdrop-filter: blur(15px);
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
 }
 
