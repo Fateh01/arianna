@@ -76,9 +76,9 @@
 
 
 	.card.hover {
-    transform: translate(-50%,-50%) perspective(2000px) rotate(-5deg) scale(1.25);
-    box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
-}
+		transform: translate(-50%, -50%) perspective(2000px) rotate(-5deg) scale(1.25);
+		box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+	}
 
 	.card:before {
 		content: '';
@@ -162,14 +162,15 @@
 	}
 
 	.overlay-text {
-        position: absolute;
-        bottom: 20px; /* Adjust the distance from the bottom */
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        color: white;
-        font-size: 20px;
-        z-index: 2;
+		position: absolute;
+		bottom: 20px;
+		/* Adjust the distance from the bottom */
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		color: white;
+		font-size: 20px;
+		z-index: 2;
 	}
 </style>
 
@@ -185,21 +186,20 @@
 			<div class="overlay-text">tap to open</div>
 		</div>
 		<div class="details">
-			<h2 class="color1">placeholder</h2>
-				<h4 class="color2 margin">(HAPPY BIRTHDAY)</h4>
-					<p>cheers to not getting cancer</p>
-					<p class="text-right">Happy Birthday cow</p>
-					<p class="text-right">love you lots</p>
+			<p>cheers to not getting cancer</p>
+			<p><a href="error.html">Here's your present</a></p>
+			<p class="text-right">Happy Birthday cow</p>
+			<p class="text-right">love you lots</p>
 		</div>
 	</div>
 	<script>
 		function openNote() {
-            const cardElement = document.querySelector('.card');
-            cardElement.classList.add('hover');
-            cardElement.click();
-        }
-    
-        setTimeout(openNote, 500);
+			const cardElement = document.querySelector('.card');
+			cardElement.classList.add('hover');
+			cardElement.click();
+		}
+
+		setTimeout(openNote, 500);
 
 		function textDisplay() {
 			const overlayText = document.querySelector('.overlay-text');
@@ -208,10 +208,10 @@
 
 		setTimeout(textDisplay, 2000);
 	</script>
-	
-	
-	
-	
+
+
+
+
 </body>
 
 </html>
